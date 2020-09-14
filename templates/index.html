@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Predict Anxiety</title>
+<!--
+<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+-->  
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type='text/css'>
+</head>
+<body>
+    <h1>Predict Anxiety</h1>
+    <form action="{{ url_for('predict')}}" method="post">
+        <label for="Age"><strong>Age:</strong></label>
+        <input id = "Age" type="number" name="Age" placeholder="Age" required="required" />
+        <br>
+        <label for="gender"><strong>Gender:</strong></label>
+            <select id="gender" name="gender">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Transgender">Transgender</option>
+                <option value="Other">Other</option>
+            </select>
+        <br>
+        <label for="marital"><strong> Status: </strong> </label>
+            <select id="marital" name="marital" required="required">
+                <option value="Single">Single</option>
+                <option value="Married">Married</option>
+                <option value="Divorced">Divorced</option>
+                <option value="Widower">Widower</option>
+                <option value="Separated">Separated</option>
+            </select>
+            <br>
+        <label for="family"> <strong> Type: </strong> </label>
+            <select id="family" name="family" required="required">
+                <option value="Alone">Alone</option>
+                <option value="Nuclear">Nuclear</option>
+                <option value="Joint">Joint</option>
+                <option value="Extended Family">Extended Family</option>
+            </select>    
+            <br>
+        <label for="working"> <strong> Culture: </strong> </label>
+            <select id="working" name="working" required="required">
+                <option value="Healthcare worker currently dealing with patient">Heathcare worker currently dealing with patients</option>
+                <option value="Working (coming across lot of different peoples)">Working (coming across lot of different peoples)</option>
+                <option value="Working from home">Working from home</option>
+                <option value="Not working">Not working</option>
+            </select>    
+            <br>
+        <label for="hereditary"> <strong> Mental Disorder: </strong> </label>
+            <select id="hereditary" name="hereditary" required="required">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+            <br>
+        <label for="substance"> <strong> Use: </strong> </label>
+            <select name="substance" id="substance" required="required">
+              <option value="alcohol">Alcohol</option>
+              <option value="cigarette">Cigarette</option>
+              <option value="narcotics">Narcotics</option>
+              <option value="None">None</option>
+            </select>
+            <br>
+        <input type="submit" value="Submit">
+    </form>
+   <br>
+   <br>
+   {{ prediction_text }}
+</body>
+</html>
