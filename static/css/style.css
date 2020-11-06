@@ -1,42 +1,132 @@
-/* Style inputs */
-/*
-input[type=number], select {
-	width: 50%;
-	padding: 12px 20px;
-	margin: 8px 0;
-	display: inline-block;
-	border: 1px solid #ccc;
-	border-radius: 4px;
-	box-sizing: border-box;
-  }
-  */
-
+/* 
   input {
 	display: block;
 	width: 50%;
+	height: 100px;
+  } */
+
+:root {
+	--primryColor: #f09d51;
+	--mainWhite: #fff;
+	--mainBlack: #222;
+	--mainGrey: #ececec;
+}
+
+body {
+	color: var(--mainBlack);
+	background: var(--mainGrey);
+	font-family: "lato", sans-serif;
+}
+
+.cf {
+	width: 100%;
+	box-sizing: border-box;
+	display: table;
+	overflow: hidden;
+}
+
+.logo {
+	float: left;
+	margin-right: 30px;
+	height: 100%;
+	width: 60%;
+	display: table-cell;
+	box-sizing: border-box;
+	resize: both;
+	overflow: hidden;
+}
+
+.fields {
+	float: left;
+	align-content: center;
+	height: 100%;
+	width: 35%;
+	display: table-cell;
+	box-sizing: border-box;
+	resize: both;
+	overflow: hidden;
+}
+
+  /* .fields {
+	  position: relative;	
+	  margin: auto;
+	  height: 100px;
+	  display: inline-block;
+	  vertical-align: middle;
+	  width: calc(100% - 500px); 
+  } */
+
+  /* img {
+    display: inline-block;
+    vertical-align: middle;
+    width: 500px;
+} */
+
+
+img {
+    max-width: 100%;
+	max-height: 100%;
+	object-fit: contain;
+}
+   /* .logo {
+	background-image: url("/static/images/anxiety.png");
+	height: 500px;
+	width: 500px;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	image-resolution: 0.5;
+  }  */
+
+  /* h1 {
+	  text-align: center;
+  } */
+
+  h2 {
+	  /* text-align: center; */
+	  margin-top: 2rem;
   }
-  
-  label,
+
+  label {
+	display: block;
+	align-items: left;
+	width: 200px;
+	height: 20px;
+  }
+
+  select, input {
+	display: block;
+	align-items: left;
+	width: 350px;
+	height: 20px;
+	margin-top: 0.2rem;
+  }
+
+  /* label,
   select {
 	display: block;
 	width: 50%;
 	max-width: 50%;
-  }
+  } */
 
   /* Style the submit button */
   input[type=submit] {
-	width: 50%;
-	background-color: #4CAF50;
+	width: 350px;
+	height: 50px;
+	background-color: var(--mainBlack);
 	color: white;
 	padding: 14px 20px;
 	margin: 8px 0;
 	border: none;
 	border-radius: 4px;
 	cursor: pointer;
+	margin-top: 1rem;
   }
   
   /* Add a background color to the submit button on mouse-over */
   input[type=submit]:hover {
-	background-color: #45a049;
+	background-color: var(--mainBlack);
   }
   
