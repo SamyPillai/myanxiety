@@ -1,9 +1,4 @@
-/* 
-  input {
-	display: block;
-	width: 50%;
-	height: 100px;
-  } */
+@media screen and (max-width: 481px) {
 
 :root {
 	--primryColor: #f09d51;
@@ -47,45 +42,14 @@ body {
 	overflow: hidden;
 }
 
-  /* .fields {
-	  position: relative;	
-	  margin: auto;
-	  height: 100px;
-	  display: inline-block;
-	  vertical-align: middle;
-	  width: calc(100% - 500px); 
-  } */
-
-  /* img {
-    display: inline-block;
-    vertical-align: middle;
-    width: 500px;
-} */
-
-
 img {
     max-width: 100%;
 	max-height: 100%;
 	object-fit: contain;
 }
-   /* .logo {
-	background-image: url("/static/images/anxiety.png");
-	height: 500px;
-	width: 500px;
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: cover;
-	image-resolution: 0.5;
-  }  */
 
-  /* h1 {
-	  text-align: center;
-  } */
 
   h2 {
-	  /* text-align: center; */
 	  margin-top: 2rem;
   }
 
@@ -103,13 +67,6 @@ img {
 	height: 20px;
 	margin-top: 0.2rem;
   }
-
-  /* label,
-  select {
-	display: block;
-	width: 50%;
-	max-width: 50%;
-  } */
 
   /* Style the submit button */
   input[type=submit] {
@@ -130,3 +87,4 @@ img {
 	background-color: var(--mainBlack);
   }
   
+}
