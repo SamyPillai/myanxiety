@@ -9,7 +9,8 @@ model = joblib.load(open('model.pkl', 'rb'))
 
 @app.route('/')
 def home():
-    return render_template('index.html')
+    img_src = "static/anxiety.png"
+    return render_template('index.html',imgSrc=img_src)
 
 @app.route('/predict',methods=['POST'])
 def predict():
@@ -84,10 +85,12 @@ def predict():
 
     if prediction == 0:
         output = 'Mild/Moderate'
+        img_src = "static/weak.png"
     elif prediction == 1:
         output = 'Normal'
+        img_src = "static/strong.png"
 
-    return render_template('index.html', prediction_text='Anxiety Level : {}'.format(output))
+    return render_template('index.html', prediction_text='Anxiety Level : {}'.format(output), imgSrc=img_src)
 
 @app.route('/results',methods=['POST'])
 def results():
